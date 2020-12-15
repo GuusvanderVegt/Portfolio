@@ -1,0 +1,161 @@
+// Colors
+
+$dark: #0b131a;
+$light: #fff;
+$grey: #7f888e;
+$dark-grey: #464646;
+$white: #fff !default;
+$dot-color: #5a5f64;
+
+// Text colors
+
+.color-dark {
+    color: $dark !important;
+}
+.color-white {
+    color: white !important;
+}
+.color-grey {
+    color: $grey !important;
+}
+.color-light {
+    color: $light !important;
+}
+
+// Background colors
+
+.background-dark {
+    background-color: $dark;
+}
+.background-white {
+    background-color: white;
+}
+.background-grey {
+    background-color: $grey;
+}
+.background-light {
+    background-color: $light;
+}
+
+// Before Background
+
+.before-dark {
+    &:before {
+        background-color: $dark;
+    }
+}
+.before-white {
+    &:before {
+        background-color: white;
+    }
+}
+.before-grey {
+    &:before {
+        background-color: $grey;
+    }
+}
+.before-light {
+    &:before {
+        background-color: $light;
+    }
+}
+
+// After background
+
+.after-dark {
+    &:after {
+        background-color: $dark;
+    }
+}
+.after-white {
+    &:after {
+        background-color: white;
+    }
+}
+.after-grey {
+    &:after {
+        background-color: $grey;
+    }
+}
+.after-light {
+    &:after {
+        background-color: $light;
+    }
+}
+
+.dots-header {
+    background: linear-gradient(90deg, $dark (40px - 4px), transparent 1%)
+            center,
+        linear-gradient($dark (28px - 4px), transparent 1%) center, $dot-color;
+    background-size: 40px 28px;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: radial-gradient(
+            circle at 30vw 0px,
+            transparent,
+            $dark 40%
+        );
+    }
+}
+
+.dots {
+    background: linear-gradient(90deg, $dark (32px - 2px), transparent 1%)
+            center,
+        linear-gradient($dark (32px - 2px), transparent 1%) center, #84898c;
+    background-size: 32px 32px;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 1;
+        background-image: linear-gradient(
+            110deg,
+            rgba(11, 19, 26, 0.95) 0%,
+            rgba(11, 19, 26, 0.95) 5%,
+            rgba(11, 19, 26, 0.45) 10%,
+            rgba(11, 19, 26, 0.45) 15%,
+            rgba(11, 19, 26, 0.95) 20%,
+            rgba(11, 19, 26, 0.95) 25%,
+            rgba(11, 19, 26, 0.45) 30%,
+            rgba(11, 19, 26, 0.45) 35%,
+            rgba(11, 19, 26, 0.95) 40%,
+            rgba(11, 19, 26, 0.95) 45%,
+            rgba(11, 19, 26, 0.45) 50%,
+            rgba(11, 19, 26, 0.45) 55%,
+            rgba(11, 19, 26, 0.95) 60%,
+            rgba(11, 19, 26, 0.95) 65%,
+            rgba(11, 19, 26, 0.45) 70%,
+            rgba(11, 19, 26, 0.45) 75%,
+            rgba(11, 19, 26, 0.95) 80%,
+            rgba(11, 19, 26, 0.95) 85%,
+            rgba(11, 19, 26, 0.45) 90%,
+            rgba(11, 19, 26, 0.45) 95%
+        );
+        animation: Gradient 30s linear infinite;
+        -webkit-animation: Gradient 30s linear infinite;
+        -moz-animation: Gradient 30s linear infinite;
+        background-size: 400% 400%;
+    }
+}
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    dt: 1600px
+) !default;
