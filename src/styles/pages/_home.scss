@@ -1,3 +1,7 @@
+.home {
+    background-color: $dark;
+}
+
 .intro {
     color: white;
     background-image: url("../assets/images/coding.jpg");
@@ -9,7 +13,9 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    // justify-content: center;
 
     &__overlay {
         background-color: rgba(0, 0, 0, 0.7);
@@ -18,6 +24,8 @@
         top: 0;
         width: 100%;
         height: 100%;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
         // z-index: 1 !important;
     }
 
@@ -43,8 +51,23 @@
     }
 }
 
-.work {
-    &__card {
-        color: black !important;
-    }
+.methods {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    // &-card {
+    //     &__subtitle {
+    //         font-size: 1.5em;
+    //         color: $dark-grey !important;
+    //     }
+
+    //     &__title {
+    //         font-size: 2.1em;
+    //     }
+
+    //     &__text {
+    //         font-size: 1em;
+    //         padding-right: 50px;
+    //     }
+    // }
 }

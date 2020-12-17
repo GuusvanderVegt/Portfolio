@@ -13,7 +13,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     max-width: 100%;
     overflow-x: hidden;
-    @include vw(font-size, 16px);
+    // @include vw(font-size, 16px);
+    font-size: 16px;
     position: relative;
     padding: 0;
     margin: 0;
