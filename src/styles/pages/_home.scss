@@ -4,11 +4,11 @@
 
 .intro {
     color: white;
-    background-image: url("../assets/images/coding.jpg");
+    background-image: url("../assets/images/coding-laptop.jpg");
     background-size: cover;
     background-position: center;
 
-    height: 800px;
+    height: 100vh;
     width: 100vw;
     position: relative;
     display: flex;
@@ -18,7 +18,7 @@
     // justify-content: center;
 
     &__overlay {
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.6);
         position: absolute;
         left: 0;
         top: 0;
@@ -55,19 +55,4 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    // &-card {
-    //     &__subtitle {
-    //         font-size: 1.5em;
-    //         color: $dark-grey !important;
-    //     }
-
-    //     &__title {
-    //         font-size: 2.1em;
-    //     }
-
-    //     &__text {
-    //         font-size: 1em;
-    //         padding-right: 50px;
-    //     }
-    // }
 }
