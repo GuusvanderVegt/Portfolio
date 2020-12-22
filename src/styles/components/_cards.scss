@@ -7,21 +7,21 @@
 
     //Elements
     &__title {
-        font-size: 2.1em;
+        font-size: 2.1em !important;
     }
 
     &__subtitle {
-        font-size: 1.5em;
+        font-size: 1.5em !important;
         color: $dark-grey !important;
     }
 
     &__text {
-        font-size: 1em;
-        padding-right: 50px;
+        font-size: 1em !important;
+        padding-right: 50px !important;
     }
 
     &__image {
-        border-radius: 20px;
+        border-radius: 20px !important;
     }
 
     //Modifiers

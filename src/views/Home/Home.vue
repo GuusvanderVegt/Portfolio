@@ -3,11 +3,7 @@
         <HomeHeader />
 
         <v-container>
-            <!-- Work -->
-            <HomeWork />
-
-            <!-- Methods -->
-            <HomeMethods />
+           <HomeInformation/>
         </v-container>
     </main>
 </template>
@@ -27,8 +23,9 @@ export default {
 
     components: {
         HomeHeader: () => import("@/views/Home/sections/Home_Intro.vue"),
-        HomeWork: () => import("@/views/Home/sections/Home_Work.vue"),
-        HomeMethods: () => import("@/views/Home/sections/Home_Methods.vue")
+        HomeInformation: () => import("@/views/Home/sections/Home_Information.vue")
+        // HomeWork: () => import("@/views/Home/sections/Home_Work.vue"),
+        // HomeMethods: () => import("@/views/Home/sections/Home_Methods.vue")
     },
 
     created() {
