@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home/Home.vue";
+import Dashboard_Home from "../views/Dashboard/Dashboard_Home";
 
 Vue.use(VueRouter);
 
@@ -18,6 +19,23 @@ const routes = [
         // which is lazy-loaded when the route is visited.
         component: () =>
             import(/* webpackChunkName: "about" */ "../views/About.vue")
+    },
+    {
+        path: "/dashboard",
+        component: () => import("../views/Dashboard.vue"),
+        children: [
+            {
+                path: "/",
+                name: "Dashboard_Home",
+                component: Dashboard_Home
+            },
+            {
+                path: "/crypto",
+                name: "Dashboard_Crypto",
+                component: () =>
+                    import("../views/Dashboard/Dashboard_Crypto.vue")
+            }
+        ]
     }
 ];
 
