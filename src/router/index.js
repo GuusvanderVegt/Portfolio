@@ -36,6 +36,11 @@ const routes = [
                     import("../views/Dashboard/Dashboard_Crypto.vue")
             }
         ]
+    },
+    {
+        path: "/login",
+        name: "Login",
+        component: () => import("../views/Authentication/Login.vue")
     }
 ];
 

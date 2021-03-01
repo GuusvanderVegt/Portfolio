@@ -115,11 +115,11 @@ export default {
 
     created() {
         this.loading = true;
-        axios.get(helpers.apiUrl("/singletons/get/PageHome")).then(response => {
-            console.log(response.data);
-            this.singleton = response.data;
-            this.loading = false;
-        });
+        // axios.get(helpers.apiUrl("/singletons/get/PageHome")).then(response => {
+        //     console.log(response.data);
+        //     this.singleton = response.data;
+        //     this.loading = false;
+        // });
     }
 };
 </script>
