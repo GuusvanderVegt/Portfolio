@@ -26,6 +26,20 @@ class helpers {
 
         // console.log(endpoint)
     }
+
+    personalApiUrl(endpoint, params = ""){
+        if(!endpoint){
+            throw new Error("No api endpoint specified!");
+        }
+
+        if(endpoint[0] !== "/"){
+            endpoint = "/" + endpoint;
+        }
+
+        console.log(params);
+
+        return `${process.env.VUE_APP_PERSONAL_API_URL}${endpoint}`
+    }
 }
 
 export default new helpers();

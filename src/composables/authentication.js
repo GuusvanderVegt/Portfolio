@@ -1,6 +1,8 @@
+import axios from "axios";
 import { ref, reactive } from "@vue/composition-api";
-// import router from "@/router";
-// import store from "@/store";
+import helpers from "@/helpers.js"
+import router from "@/router";
+import store from "@/store";
 
 export const useAuthentication = () => {
     let email = ref("");
@@ -16,7 +18,20 @@ export const useAuthentication = () => {
     });
 
     const login = () => {
-        console.log("Email: ", email, "Password: ", password);
+
+        axios.post(helpers.personalApiUrl("/auth/login"), {
+            email: email.value,
+            password: password.value
+        })
+        .then(response => {
+            store.commit("user/SET_USER", response.data.user);
+            store.commit("user/SET_ACCESS_TOKEN", response.data.access_token)
+            router.push({name: "Dashboard_Home"})
+        })
+        .catch(error => {
+            errorMessage.value = error.message;
+        })
+        
     };
 
     return {

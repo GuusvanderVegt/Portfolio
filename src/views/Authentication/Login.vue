@@ -1,11 +1,11 @@
 <template>
     <v-container>
         <v-row justify="center" align="center">
-            <v-col cols="8">
-                <v-card>
+            <v-col cols="6">
+                <v-card class="pa-4">
                     <v-card-title>Login</v-card-title>
-                    <v-card-actions class="pa-4">
-                        <v-form style="width: 100%" ref="loginForm">
+                    <v-card-actions class="pa-4 d-flex flex-column">
+                        <v-form style="width: 100%" ref="loginForm" class="mb-4">
                             <v-text-field
                                 label="Email"
                                 v-model="email"
@@ -18,10 +18,12 @@
                                 :rules="rules.password"
                             ></v-text-field>
 
-                            <v-btn color="primary" @click="validate"
+                            <v-btn color="primary" @click="validate" width="100%"
                                 >Login</v-btn
                             >
                         </v-form>
+                        
+                        <v-alert type="error" v-if="errorMessage" width="100%">{{errorMessage}}</v-alert>
                     </v-card-actions>
                 </v-card>
             </v-col>
@@ -47,8 +49,11 @@ export default {
         const validate = () => {
             if (context.refs.loginForm.validate()) {
                 login();
+                console.log(errorMessage);
             }
         };
+
+        
 
         return { email, password, errorMessage, rules, validate };
     }
