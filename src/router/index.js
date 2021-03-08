@@ -30,7 +30,7 @@ const routes = [
                 component: Dashboard_Home
             },
             {
-                path: "/crypto",
+                path: "crypto",
                 name: "Dashboard_Crypto",
                 component: () =>
                     import("../views/Dashboard/Dashboard_Crypto.vue")
