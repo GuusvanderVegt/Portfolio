@@ -1,27 +1,24 @@
 <template>
-  <v-container>
-      <v-card>
-          <v-card-title>Balance</v-card-title>
-      </v-card>
-  </v-container>
+    <v-container>
+        <v-card>
+            <v-card-title>Balance</v-card-title>
+        </v-card>
+    </v-container>
 </template>
 
 <script>
-import {useCrypto} from "@/composables/crypto.js"
+import { useCrypto } from "@/composables/crypto.js";
 
 export default {
     name: "Crypto_Balances",
 
-    setup () {
-
+    setup() {
         const { getBalance } = useCrypto();
+        getBalance();
 
         return { getBalance };
-
     }
-}
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

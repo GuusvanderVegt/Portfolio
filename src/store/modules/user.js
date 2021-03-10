@@ -1,28 +1,25 @@
 const store = {
     data: null,
     accessToken: null
-}
+};
 
 const getters = {
-    getAccessToken : state => {
+    getAccessToken: state => {
         return state.accessToken;
     }
+};
 
-}
-
-const actions = {
-
-}
+const actions = {};
 
 const mutations = {
-    SET_USER(state, user){
+    SET_USER(state, user) {
         state.data = user;
     },
 
     SET_ACCESS_TOKEN(state, token) {
         state.accessToken = token;
     }
-}
+};
 
 export default {
     namespaced: true,
@@ -30,4 +27,4 @@ export default {
     getters,
     actions,
     mutations
-}
+};
