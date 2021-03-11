@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import userModule from "./modules/user";
+import cryptoModule from "./modules/crypto";
 import createPersistedState from "vuex-persistedstate";
 
 Vue.use(Vuex);
@@ -12,7 +13,8 @@ const userState = createPersistedState({
 
 export default new Vuex.Store({
     modules: {
-        user: userModule
+        user: userModule,
+        crypto: cryptoModule
     },
 
     plugins: [userState]
