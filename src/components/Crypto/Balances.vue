@@ -2,16 +2,16 @@
     <v-container>
         <v-card>
             <v-card-title>Balance</v-card-title>
+
             <v-card-text v-if="loading">Loading...</v-card-text>
-            <v-card-text v-else>
-                <p v-for="(balance, index) in balances" :key="index">
-                    {{ balance.symbol }} - Available: {{ balance.available }}
-                </p>
-            </v-card-text>
-            <!-- <v-card-text v-for="(balance, index) in balances" :key="index"
-                >{{ balance.symbol }} - Available:
-                {{ balance.available }}</v-card-text
-            > -->
+
+            <v-data-table
+                v-else
+                :headers="tableHeaders"
+                :items="balances"
+                :items-per-page="5"
+                class="elevation-1"
+            ></v-data-table>
         </v-card>
     </v-container>
 </template>
@@ -27,13 +27,35 @@ export default {
         const { getBalance, loading } = useCrypto();
         getBalance();
 
+        /**
+         * Variables
+         */
         const balances = computed(
             () => root.$store.getters["crypto/getBalances"]
         );
 
-        return { getBalance, balances, loading };
+        const tableHeaders = computed(() => {
+            return Object.keys(
+                root.$store.getters["crypto/getBalances"][0]
+            ).map(key => {
+                return {
+                    text: key.charAt(0).toUpperCase() + key.slice(1),
+                    value: key
+                };
+            });
+        });
+
+        /**
+         * Functions
+         */
+
+        return { getBalance, balances, tableHeaders, loading };
     }
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.v-data-table-header > tr {
+    font-weight: bold;
+}
+</style>
