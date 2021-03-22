@@ -22,7 +22,7 @@
 
 <script>
 import { useCrypto } from "@/composables/crypto.js";
-import { computed, ref } from "@vue/composition-api";
+import { computed, ref, watch } from "@vue/composition-api";
 
 export default {
     setup(props, { root }) {
@@ -34,6 +34,14 @@ export default {
         const tradeFilters = ["ADA-EUR", "BTC-EUR", "ETH-EUR", "CHZ-EUR"];
         const trades = computed(() => root.$store.getters["crypto/getTrades"]);
 
+        //Watch
+        watch(filter, (currentValue, oldValue) => {
+            if (currentValue != oldValue) {
+                getTrades(currentValue);
+            }
+        });
+
+        //Methods
         const tableHeaders = computed(() => {
             const headers = Object.keys(
                 root.$store.getters["crypto/getTrades"][0]
@@ -42,7 +50,8 @@ export default {
             return headers.map(header => {
                 return {
                     text: header.charAt(0).toUpperCase() + header.slice(1),
-                    value: header
+                    value: header,
+                    width: "150px"
                 };
             });
         });
