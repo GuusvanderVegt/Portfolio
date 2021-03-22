@@ -4,9 +4,14 @@ import store from "@/store";
 import { computed, ref } from "@vue/composition-api";
 
 export const useCrypto = () => {
+    //Variables
     let loading = ref(false);
-
     const accessToken = computed(() => store.getters["user/getAccessToken"]);
+
+    //Static variables
+    let config = {
+        headers: { Authorization: `Bearer ${accessToken.value}` }
+    };
 
     const getBalance = (currency = null) => {
         let params = "";
@@ -15,10 +20,6 @@ export const useCrypto = () => {
             // TODO: IMPLEMENT
             // Sanity checks for provided currencies. And add currency filter to params
         }
-
-        const config = {
-            headers: { Authorization: `Bearer ${accessToken.value}` }
-        };
 
         loading.value = true;
         axios
@@ -35,8 +36,28 @@ export const useCrypto = () => {
             });
     };
 
+    const getTrades = (currency = "ADA-EUR") => {
+        let params = "";
+        if (currency) {
+            //Some more sanity checks on given currencies
+            params = params + `&currency=${currency}`;
+        }
+
+        loading.value = true;
+        axios
+            .get(helpers.personalApiUrl("/crypto/trades", params), config)
+            .then(response => {
+                store.commit("crypto/SET_TRADES", response.data);
+                console.log(response.data, "Trades");
+            })
+            .finally(() => {
+                loading.value = false;
+            });
+    };
+
     return {
         getBalance,
+        getTrades,
         loading
     };
 };

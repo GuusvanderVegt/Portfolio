@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <Balances />
+        <Trades />
     </v-container>
 </template>
 
@@ -9,7 +9,7 @@ export default {
     name: "Crypto",
 
     components: {
-        Balances: () => import("@/components/Crypto/Balances.vue")
+        Trades: () => import("@/components/Crypto/Trades.vue")
     }
 };
 </script>

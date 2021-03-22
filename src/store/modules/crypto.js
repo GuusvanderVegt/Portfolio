@@ -1,6 +1,7 @@
 const state = {
     errors: null,
-    balances: null
+    balances: null,
+    trades: null
 };
 
 const getters = {
@@ -17,6 +18,14 @@ const getters = {
         return state.balances.find(
             balance => balance.symbol == valuta.toUppercase()
         );
+    },
+
+    getTrades(state) {
+        return state.trades.map(trade => {
+            const timestamp = new Date(trade.timestamp);
+            trade.timestamp = timestamp.toUTCString();
+            return trade;
+        });
     }
 };
 
@@ -29,6 +38,10 @@ const mutations = {
 
     SET_BALANCES(state, balances) {
         state.balances = balances;
+    },
+
+    SET_TRADES(state, trades) {
+        state.trades = trades;
     }
 };
 
