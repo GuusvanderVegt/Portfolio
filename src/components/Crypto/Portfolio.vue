@@ -45,10 +45,11 @@
         </v-col>
         <v-spacer></v-spacer>
         <v-col cols="5">
+            <h2 style="text-align: center" class="mb-2">Overview</h2>
             <apexchart
-                height="400"
+                height="350"
                 width="95%"
-                type="donut"
+                type="pie"
                 :options="chartOptions"
                 :series="series"
             ></apexchart>
@@ -67,23 +68,6 @@ export default {
         return {
             series: [12, 55, 41, 17],
             chartOptions: {
-                chart: {
-                    type: "donut"
-                },
-                // responsive: [
-                //     {
-                //         breakpoint: 480,
-                //         options: {
-                //             chart: {
-                //                 width: "100%"
-                //             },
-                //             legend: {
-                //                 position: "bottom"
-                //             }
-                //         }
-                //     }
-                // ],
-
                 labels: ["Bitcoin", "Cardano", "Etherium", "USDT"]
             }
         };
