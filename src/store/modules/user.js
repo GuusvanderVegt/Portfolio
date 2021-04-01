@@ -6,6 +6,10 @@ const store = {
 const getters = {
     getAccessToken: state => {
         return state.accessToken;
+    },
+
+    getUserName: state => {
+        return state.data.name;
     }
 };
 

@@ -5,6 +5,9 @@ import store from "./store";
 import vuetify from "./plugins/vuetify";
 import CompositionApi from "@vue/composition-api";
 
+import VueApexCharts from "vue-apexcharts";
+Vue.use(VueApexCharts);
+
 Vue.use(CompositionApi);
 
 Vue.config.productionTip = false;
