@@ -10,6 +10,8 @@ Vue.use(VueApexCharts);
 
 Vue.use(CompositionApi);
 
+require("@/assets/styles/main.scss");
+
 Vue.config.productionTip = false;
 require("./styles/main.scss");
 
