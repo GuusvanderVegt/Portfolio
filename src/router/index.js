@@ -21,6 +21,11 @@ const routes = [
             import(/* webpackChunkName: "about" */ "../views/About.vue")
     },
     {
+        path: "/sandbox",
+        name: "Sandbox",
+        component: () => import("../views/Sandbox.vue")
+    },
+    {
         path: "/dashboard",
         component: () => import("../views/Dashboard.vue"),
         children: [

@@ -1,29 +1,61 @@
 .btn {
     margin-top: 0;
     position: relative;
-    font-size: 1.2rem;
     font-weight: bold;
-    height: 50px;
     transition: 100ms ease-in-out;
-
-    &::after {
-        content: "";
-        height: 1px;
-        width: 0%;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        background-color: white;
-        transition: 200ms ease-in-out;
-    }
-
-    &:hover {
-        &::after {
-            width: 100%;
-        }
-    }
+    border-radius: 10px;
+    font-size: 1.2rem;
+    // height: 50px;
+    
+    //testing
+    padding: .5em 1.25em;
+    // padding: 15px 30px;
 
     &__simple {
         height: 30px;
+
+        &::after {
+            content: "";
+            height: 1px;
+            width: 0%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: white;
+            transition: 200ms ease-in-out;
+        }
+    
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+    /* Foreground colors (text colors) */
+    &--fg-white {
+        color: white
+    }
+
+    /* Background colors */
+
+    &--bg-blue {
+        background-color: $blue;
+        @extend .btn--fg-white;
+    }
+
+    /* Spacing */
+    &--no-spacing {
+        padding: inherit;
+        margin: inherit;
+    }
+
+    /* Sizing */
+    &--l {
+        font-size: 1.5rem;
+    }
+
+    &--s {
+        font-size: .85rem;
     }
 }
