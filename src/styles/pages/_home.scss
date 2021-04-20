@@ -1,5 +1,5 @@
 .home {
-    background-color: $dark;
+    background-color: $light;
 }
 
 .home-intro {
@@ -34,7 +34,7 @@
 
     &__title {
         font-size: 1.5rem;
-        margin-bottom: 0px;
+        margin-bottom: 1em !important;
     }
 
     &__subtitle {
@@ -50,6 +50,56 @@
 
         // margin-right: 20px;
         margin-right: 1.1em !important;
+    }
+}
+
+.key-features {
+    margin: 2rem 0;
+
+    &__header{
+        text-align: center;
+        width: 13rem;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+
+        margin-bottom: 2rem;
+        &::after{
+            content: "";
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: black;
+        }
+    }
+
+    &__wrapper {
+        @include media-breakpoint-down(sm){
+            // display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .key-feature {
+        // color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__icon {
+            color: black !important;
+        }
+
+        &__text {
+            font-size: 1.1rem;
+            padding: 0px 2em;
+            // width: 80%;
+            // margin-left: auto;
+            // margin-right: auto;
+            text-align: center;
+        }
     }
 }
 

@@ -7,7 +7,7 @@
                 <div class="home-intro__text">
                     <p class="home-intro__title">Hello there!</p>
                     <h1 class="home-intro__subtitle">
-                        My name is Guus, what can i do for you?
+                        My name is Guus, what can I do for you?
                     </h1>
                 </div>
 
