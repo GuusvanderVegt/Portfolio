@@ -4,6 +4,7 @@
 
         <v-container>
             <HomeKeyFeatures />
+            <HomeCases />
         </v-container>
     </main>
 </template>
@@ -24,11 +25,8 @@ export default {
     components: {
         HomeHeader: () => import("@/views/Home/sections/Home_Intro.vue"),
         HomeKeyFeatures: () =>
-            import("@/views/Home/sections/Home_KeyFeatures.vue")
-        // HomeInformation: () =>
-        //     import("@/views/Home/sections/Home_InformationV2.vue")
-        // HomeWork: () => import("@/views/Home/sections/Home_Work.vue"),
-        // HomeMethods: () => import("@/views/Home/sections/Home_Methods.vue")
+            import("@/views/Home/sections/Home_KeyFeatures.vue"),
+        HomeCases: () => import("./sections/Home_Cases")
     },
 
     created() {

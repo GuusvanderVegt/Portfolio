@@ -1,8 +1,8 @@
 <template>
     <section class="home__key-features key-features">
         <v-row>
-            <v-col cols="12">
-                <h1 class="key-features__header">
+            <v-col cols="12" class="d-flex justify-center">
+                <h1 class="key-features__header header__underlined">
                     KEY FEATURES
                 </h1>
             </v-col>
