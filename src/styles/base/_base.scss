@@ -6,15 +6,29 @@
 
 html {
     overflow-x: hidden;
+    @include vw(font-size, 16px);
+    @include media-breakpoint-down(xl) {font-size: 16px;}
+    @include media-breakpoint-down(sm) {font-size: 14px;}
 }
+
+// @include media-breakpoint-down(xl){
+//     html{
+//         font-size: 16px;
+//     }
+// }
+
+// @media screen and (max-width: $grid-breakpoints(xl)){
+//     html {
+//         font-size: 16px;
+//     }
+// }
 
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     max-width: 100%;
     overflow-x: hidden;
-    // @include vw(font-size, 16px);
-    font-size: 16px;
+
     position: relative;
     padding: 0;
     margin: 0;

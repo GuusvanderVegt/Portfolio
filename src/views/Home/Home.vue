@@ -3,7 +3,7 @@
         <HomeHeader />
 
         <v-container>
-            <HomeInformation />
+            <HomeKeyFeatures />
         </v-container>
     </main>
 </template>
@@ -23,8 +23,10 @@ export default {
 
     components: {
         HomeHeader: () => import("@/views/Home/sections/Home_Intro.vue"),
-        HomeInformation: () =>
-            import("@/views/Home/sections/Home_Information.vue")
+        HomeKeyFeatures: () =>
+            import("@/views/Home/sections/Home_KeyFeatures.vue")
+        // HomeInformation: () =>
+        //     import("@/views/Home/sections/Home_InformationV2.vue")
         // HomeWork: () => import("@/views/Home/sections/Home_Work.vue"),
         // HomeMethods: () => import("@/views/Home/sections/Home_Methods.vue")
     },
