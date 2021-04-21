@@ -1,5 +1,5 @@
 .card {
-    border-radius: 20px !important;
+    // border-radius: 20px !important;
 
     & > * {
         color: black !important;
@@ -17,7 +17,7 @@
 
     &__text {
         font-size: 1em !important;
-        padding-right: 50px !important;
+        // padding-right: 50px !important;
     }
 
     &__image {
@@ -25,6 +25,8 @@
     }
 
     //Modifiers
+
+
     &--information {
     }
 }

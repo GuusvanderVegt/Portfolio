@@ -1,0 +1,12 @@
+.case-card {
+    //
+    transition: 200ms ease-in-out !important;
+    cursor: pointer;
+    
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            transform: scale(1.1);
+            z-index: 999
+        }
+    }
+}
