@@ -17,7 +17,7 @@
                     <button
                         class="btn btn__simple btn--no-spacing home-intro__button"
                     >
-                        View portfolio
+                        Cases
                     </button>
                     <button class="btn btn__simple btn--no-spacing">
                         Make an appointment

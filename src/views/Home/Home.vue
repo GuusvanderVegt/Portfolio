@@ -5,6 +5,7 @@
         <v-container>
             <HomeKeyFeatures />
             <HomeCases />
+            <HomeContact />
         </v-container>
     </main>
 </template>
@@ -26,7 +27,8 @@ export default {
         HomeHeader: () => import("@/views/Home/sections/Home_Intro.vue"),
         HomeKeyFeatures: () =>
             import("@/views/Home/sections/Home_KeyFeatures.vue"),
-        HomeCases: () => import("./sections/Home_Cases")
+        HomeCases: () => import("./sections/Home_Cases"),
+        HomeContact: () => import("./sections/Home_Contact")
     },
 
     created() {

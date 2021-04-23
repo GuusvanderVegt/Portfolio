@@ -84,6 +84,15 @@
 .cases {
     &__header{
         display: inline-block;
+        margin-bottom: 1.2rem;
+    }
+}
+
+.contact {
+    margin-top: 1.2rem;
+
+    &__text{
+        margin: 1.2rem 0;
     }
 }
 
