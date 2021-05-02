@@ -1,11 +1,11 @@
 <template>
-    <section class="home__contact contact">
+    <section class="home__contact contact" id="contact">
         <v-row>
             <v-col
                 cols="12"
                 class="d-flex justify-center flex-column align-center"
             >
-                <h1 class="contact__header header__underlined">
+                <h1 class="contact__header header--underlined">
                     CONTACT ME
                 </h1>
 

@@ -1,8 +1,8 @@
 <template>
-    <section class="home__cases cases">
+    <section class="home__cases cases" id="cases">
         <v-row>
             <v-col cols="12" class="d-flex justify-center">
-                <h1 class="cases__header header__underlined">
+                <h1 class="cases__header header--underlined">
                     CASES
                 </h1>
             </v-col>

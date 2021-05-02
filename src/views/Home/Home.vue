@@ -4,8 +4,9 @@
 
         <v-container>
             <HomeKeyFeatures />
-            <HomeCases />
-            <HomeContact />
+            <HomeAboutMe />
+            <HomeCases ref="cases" />
+            <HomeContact ref="contact" />
         </v-container>
     </main>
 </template>
@@ -25,6 +26,7 @@ export default {
 
     components: {
         HomeHeader: () => import("@/views/Home/sections/Home_Intro.vue"),
+        HomeAboutMe: () => import("@/views/Home/sections/Home_AboutMe.vue"),
         HomeKeyFeatures: () =>
             import("@/views/Home/sections/Home_KeyFeatures.vue"),
         HomeCases: () => import("./sections/Home_Cases"),

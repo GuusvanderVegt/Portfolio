@@ -2,7 +2,7 @@
     <section class="home__key-features key-features">
         <v-row>
             <v-col cols="12" class="d-flex justify-center">
-                <h1 class="key-features__header header__underlined">
+                <h1 class="key-features__header header--underlined">
                     KEY FEATURES
                 </h1>
             </v-col>

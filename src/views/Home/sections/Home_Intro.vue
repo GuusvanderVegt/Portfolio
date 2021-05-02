@@ -1,5 +1,5 @@
 <template>
-    <section class="home__intro home-intro">
+    <section class="home__intro home-intro mt-0">
         <div class="home-intro__overlay" style="z-index: 0" />
 
         <v-container>
@@ -16,10 +16,14 @@
                 <div class="home-intro__actions">
                     <button
                         class="btn btn__simple btn--no-spacing home-intro__button"
+                        @click="scrollIntoView('cases')"
                     >
                         Cases
                     </button>
-                    <button class="btn btn__simple btn--no-spacing">
+                    <button
+                        class="btn btn__simple btn--no-spacing"
+                        @click="scrollIntoView('contact')"
+                    >
                         Make an appointment
                     </button>
                 </div>
@@ -29,7 +33,17 @@
 </template>
 
 <script>
-export default {};
+export default {
+    methods: {
+        scrollIntoView(element) {
+            if (this.$parent.$refs[element]) {
+                this.$parent.$refs[element].$el.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        }
+    }
+};
 </script>
 
 <style></style>
