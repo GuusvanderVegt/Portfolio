@@ -1,10 +1,11 @@
 <template>
     <main class="home">
+        <Navbar />
         <HomeHeader />
 
         <v-container>
             <HomeKeyFeatures />
-            <HomeAboutMe />
+            <HomeAboutMe ref="aboutme" />
             <HomeCases ref="cases" />
             <HomeContact ref="contact" />
         </v-container>
@@ -25,7 +26,8 @@ export default {
     },
 
     components: {
-        HomeHeader: () => import("@/views/Home/sections/Home_Intro.vue"),
+        Navbar: () => import("@/components/Portfolio-Nav.vue"),
+        HomeHeader: () => import("@/views/Home/sections/Home_Hero.vue"),
         HomeAboutMe: () => import("@/views/Home/sections/Home_AboutMe.vue"),
         HomeKeyFeatures: () =>
             import("@/views/Home/sections/Home_KeyFeatures.vue"),

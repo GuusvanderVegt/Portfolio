@@ -1,4 +1,5 @@
 @import "./base/variables";
+@import "./base/animations";
 @import "./utilities/functions";
 @import "./utilities/mixins";
 
@@ -13,6 +14,8 @@
 
 //Partials
 @import "./partials/buttons";
+@import "./partials/squares";
+@import "./partials/sphere";
 
 //Cards
 @import "./components/cards/card";
@@ -20,3 +23,6 @@
 
 //Forms
 @import "./components/forms/form";
+
+//Nav
+@import "./components/navbar"

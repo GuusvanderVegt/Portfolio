@@ -1,0 +1,29 @@
+.sphere{
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+
+    &--dark{
+        background-color: $pf-light-dark;
+    }
+
+    &--light {
+        background-color: $pf-white;
+    }
+
+    &--fade-top{
+        animation: fadeInFromTop 1s ease both;
+    }
+
+    &--fade-bottom{
+        animation: fadeInFromBottom 1s ease both;
+    }
+
+    &--fade-left{
+        animation: fadeInFromLeft 1s ease both;
+    }
+
+    &--fade-right{
+        animation: fadeInFromRight 1s ease both;
+    }
+}
