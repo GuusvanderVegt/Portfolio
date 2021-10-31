@@ -59,6 +59,16 @@
     display: flex;
     @include media-breakpoint-down(sm) {flex-direction: column;}
 
+    @include media-breakpoint-down(sm){
+        .home-hero__right{
+            display: none;
+        }
+
+        .home-hero__left {
+            width: 100%;
+        }
+    }
+
     &__left{
         position: relative;
         width: 70%;
@@ -79,7 +89,7 @@
 
     &__header{
         display: inline;
-        font-size: 4.43rem;
+        // font-size: 4.43rem;
         position: relative;
         padding-bottom: 10px;
         font-weight: 600;
@@ -110,7 +120,7 @@
         font-weight: 500 !important;
 
         &:hover{
-            color: $pf-light-gray;
+            // color: $pf-light-gray;
         }
 
         &:first-child{

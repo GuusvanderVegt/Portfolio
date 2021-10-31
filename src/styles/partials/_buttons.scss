@@ -10,27 +10,27 @@
     // padding: 15px 30px;
 
     &__simple {
-        height: 30px;
+        // height: 30px;
 
-        &::after {
+        &::before {
             content: "";
-            height: 1px;
+            height: 3px;
             width: 0%;
             position: absolute;
             left: 0;
             bottom: 0;
-            background-color: white;
+            background-color: black !important;
             transition: 200ms ease-in-out;
         }
 
         //Remove hover effect from v-btn
         &::before{
-            background-color: transparent !important;
+            // background-color: transparent !important;
 
         }
     
         &:hover {
-            &::after {
+            &::before {
                 width: 100%;
             }
         }
@@ -38,9 +38,36 @@
     
     }
 
+    &--underline {
+        position: relative;
+        transition: 100ms ease-in-out;
+
+        &::before {
+            transition: 200ms ease-in-out;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background-color: $pf-light-dark;
+        }
+
+        &:hover  {
+            &::before {
+                width: 100% !important;
+
+            }
+        }
+    }
+
     /* Foreground colors (text colors) */
     &--fg-white {
         color: white
+    }
+
+    &--bg-dark {
+        background-color: $pf-light-dark;
     }
 
     /* Background colors */

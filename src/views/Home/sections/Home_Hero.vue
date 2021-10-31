@@ -9,13 +9,13 @@
                 </h1>
                 <div class="home-hero__buttons">
                     <button
-                        class="btn btn--no-spacing home-hero__button"
+                        class="btn btn__simple btn--no-spacing home-hero__button"
                         @click="scrollIntoView('cases')"
                     >
                         CASES
                     </button>
                     <button
-                        class="btn btn--no-spacing home-hero__button"
+                        class="btn btn__simple btn--no-spacing home-hero__button"
                         @click="scrollIntoView('contact')"
                     >
                         HIRE ME

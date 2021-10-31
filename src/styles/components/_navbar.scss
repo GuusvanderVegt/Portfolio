@@ -13,10 +13,15 @@
         align-items: center;
     }
 
+    .navbar__links, &__right{
+        @include media-breakpoint-down(sm) {display: none !important;}
+    }
+
     &__left{
         width: 70%;
         height: 100%;
         padding: 0px 5.62rem;
+        @include media-breakpoint-down(sm) {padding: 0px 12px;}
         justify-content: space-between;
         
     }
